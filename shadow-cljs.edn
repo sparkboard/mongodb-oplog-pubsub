@@ -1,0 +1,8 @@
+;; shadow-cljs configuration
+{:deps true
+
+ :builds
+ {:worker {:target :node-script
+           :main oplog-pubsub.core/init
+           :output-to "compiled/server.js"
+           :devtools {:autoload true}}}}

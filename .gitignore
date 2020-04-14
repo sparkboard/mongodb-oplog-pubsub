@@ -1,0 +1,11 @@
+.env 
+node_modules
+.idea
+target
+out
+*.iml
+.shadow-cljs
+.nrepl-port
+compiled
+pom.xml
+.cpcache
