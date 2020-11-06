@@ -15,7 +15,7 @@ Each published operation is an object containing:
 Required environment variables:
 
 ```
-MONGODB_URI              # for reading docs
+MONGODB_URI_2020         # for reading docs
 MONGODB_OPLOG_URI        # for reading oplog, see https://docs.mlab.com/oplog/
 MONGODB_LOGGING_URI      # for writing audit log
 FIREBASE_SERVICE_ACCOUNT # for writing to Google PubSub topic
