@@ -1,5 +1,5 @@
 (ns oplog-pubsub.core
-  (:require ["mongo-oplog" :as MongoOplog]
+  (:require ["/vendor/mongo-oplog" :as MongoOplog]
             ["monk" :as monk]
             [applied-science.js-interop :as j]
             [cljs.pprint :as pp]

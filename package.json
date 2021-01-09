@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "dependencies": {
     "@google-cloud/pubsub": "1.6.0",
-    "mongo-oplog": "^2.1.4",
+    "debug": "^3.1.0",
+    "eventemitter3": "^2.0.3",
     "monk": "^4.0.0",
     "shadow-cljs": "^2.8.94"
   },
