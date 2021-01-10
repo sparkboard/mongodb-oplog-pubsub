@@ -1,5 +1,8 @@
 (ns oplog-pubsub.core
-  (:require ["/vendor/mongo-oplog" :as MongoOplog]
+  (:require ["eventemitter3" :refer [EventEmitter]]
+            ["debug" :as debug]
+            ["mongodb" :as mongodb]
+            ["/vendor/mongo-oplog/src/index.js" :as MongoOplog]
             ["monk" :as monk]
             [applied-science.js-interop :as j]
             [cljs.pprint :as pp]
@@ -32,10 +35,14 @@
 
 (defonce op-log nil)
 (defn make-oplog! []
-  (p/let [ts (get-ts)]
-    (prn :starting-from ts)
-    (->> (MongoOplog env/MONGODB_OPLOG_URI #js{:since (some-> ts inc)})
-         (set! op-log))))
+  (p/let [ts (get-ts)
+          _ (prn :starting-from ts)
+          OpLog (MongoOplog env/MONGODB_OPLOG_URI #js{:since (some-> ts inc)
+                                                      :libs  #js{:debug   debug
+                                                                 :mongodb mongodb
+                                                                 :eventemitter3 EventEmitter}})]
+    (set! op-log OpLog)
+    OpLog))
 
 (defn handle-op! [op]
   (when-let [op (op/normalize-op op)]
