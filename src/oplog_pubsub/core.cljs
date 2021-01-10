@@ -17,7 +17,7 @@
 ;; Keep track of position
 
 (defonce cursor-coll (j/call db :get "legacyLogCursor"))
-(def cursor-client (str env/PUBSUB_TOPIC "-client-2021"))
+(def cursor-client (doto (str env/PUBSUB_TOPIC "-client-" env/PUBSUB_CLIENT_ID) prn))
 
 (defn record-ts! [ts]
   (j/call cursor-coll :findOneAndUpdate
