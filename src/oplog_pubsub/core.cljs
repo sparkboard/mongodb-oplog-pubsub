@@ -17,7 +17,7 @@
 ;; Keep track of position
 
 (defonce cursor-coll (j/call db :get "legacyLogCursor"))
-(def cursor-client (str env/PUBSUB_TOPIC "-client"))
+(def cursor-client (str env/PUBSUB_TOPIC "-client-2021"))
 
 (defn record-ts! [ts]
   (j/call cursor-coll :findOneAndUpdate
@@ -36,6 +36,9 @@
 (defonce op-log nil)
 (defn make-oplog! []
   (p/let [ts (get-ts)
+          ts (or ts (-> (.now js/Date)
+                        (/ 1000)
+                        Math/round))
           _ (prn :starting-from ts)
           OpLog (MongoOplog env/MONGODB_OPLOG_URI #js{:since (some-> ts inc)
                                                       :libs  #js{:debug   debug
