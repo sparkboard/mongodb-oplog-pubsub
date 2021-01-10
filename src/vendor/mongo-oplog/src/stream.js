@@ -30,7 +30,7 @@ module.exports = async ({ db, ns, ts, coll }) => {
     tailable: true,
     awaitData: true,
     oplogReplay: true,
-    noCursorTimeout: true,
+    // noCursorTimeout: true,
     numberOfRetries: Number.MAX_VALUE
   })).stream()
 }
