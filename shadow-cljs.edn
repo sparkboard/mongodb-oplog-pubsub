@@ -3,6 +3,7 @@
 
  :builds
  {:worker {:target :node-script
+           :compiler-options {:output-feature-set :es8}
            :main oplog-pubsub.core/init
            :output-to "compiled/server.js"
            :devtools {:autoload true}}}}

@@ -768,7 +768,7 @@ node-forge@^0.9.0:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.9.1.tgz#775368e6846558ab6676858a4d8c6e8d16c677b5"
   integrity sha512-G6RlQt5Sb4GMBzXvhfkeFmbqR6MzhtnT7VTHuLadjkii3rdYHNdw0m8zA4BTxVIh68FicCQ2NSUANpsqkr9jvQ==
 
-node-libs-browser@^2.0.0:
+node-libs-browser@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-2.2.1.tgz#b64f513d18338625f90346d27b0d235e631f6425"
   integrity sha512-h/zcD8H9kaDZ9ALUWwlBUDo6TKF8a7qBSCSEGfjTVIYeqsioSKaAX+BN7NgiMGp6iSIXZ3PxgCu8KS3b71YK5Q==
@@ -1040,12 +1040,12 @@ shadow-cljs-jar@1.3.2:
   resolved "https://registry.yarnpkg.com/shadow-cljs-jar/-/shadow-cljs-jar-1.3.2.tgz#97273afe1747b6a2311917c1c88d9e243c81957b"
   integrity sha512-XmeffAZHv8z7451kzeq9oKh8fh278Ak+UIOGGrapyqrFBB773xN8vMQ3O7J7TYLnb9BUwcqadKkmgaq7q6fhZg==
 
-shadow-cljs@^2.8.94:
-  version "2.8.94"
-  resolved "https://registry.yarnpkg.com/shadow-cljs/-/shadow-cljs-2.8.94.tgz#62896a2478439d7c46cb4912e7c14c26e027d22b"
-  integrity sha512-o3ykB9TpCnMGem4cjmbAkVeYe/saGMVl6RhC/BdO1UNlhPZUp3hwdVp9mBDN079O5jJEtC8RmjHY6xe9utYokw==
+shadow-cljs@^2.11.12:
+  version "2.11.12"
+  resolved "https://registry.yarnpkg.com/shadow-cljs/-/shadow-cljs-2.11.12.tgz#8419b709f06d30fea0727f1dfdbac919cab436d5"
+  integrity sha512-wTOOBXVdhf9Z8Jras1IIqhhk1fqs4XUR7+U7iPH0Xlat/LAgyDtYw8ws8av18GancFXzkejc7xIPoCbPZrozGA==
   dependencies:
-    node-libs-browser "^2.0.0"
+    node-libs-browser "^2.2.1"
     readline-sync "^1.4.7"
     shadow-cljs-jar "1.3.2"
     source-map-support "^0.4.15"
